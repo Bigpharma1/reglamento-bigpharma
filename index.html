@@ -161,6 +161,22 @@
         .btn-primary:hover {
             background-color: #003366;
         }
+
+        /* Corrección para móviles: hacer la modal scrollable */
+        @media (max-width: 768px) {
+            .modal-overlay {
+                /* Cambiar la alineación para que el contenido empiece desde arriba */
+                align-items: flex-start;
+                padding: 20px; /* Añadir padding para que no toque los bordes */
+                overflow-y: auto; /* Permitir el scroll en el overlay si es necesario */
+            }
+            .modal-content {
+                max-width: 95%; /* Usar más ancho en móviles */
+                max-height: 90vh; /* Limitar la altura para que quepa en la pantalla */
+                overflow-y: auto; /* Permitir el scroll interno si el contenido es muy largo */
+                margin: 0 auto; /* Centrar horizontalmente */
+            }
+        }
     </style>
 </head>
 <body>
